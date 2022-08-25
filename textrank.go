@@ -1,9 +1,9 @@
 package TextRankZH
 
 import (
-	"github.com/guangyu7/TextRankZH/convert"
-	"github.com/guangyu7/TextRankZH/parse"
-	"github.com/guangyu7/TextRankZH/rank"
+	"github.com/axiaoxin/TextRankZH/convert"
+	"github.com/axiaoxin/TextRankZH/parse"
+	"github.com/axiaoxin/TextRankZH/rank"
 )
 
 // TextRank structure contains the Rank data object. This structure is a wrapper

@@ -1,4 +1,4 @@
-module github.com/guangyu7/TextRankZH
+module github.com/axiaoxin/TextRankZH
 
 go 1.14
 

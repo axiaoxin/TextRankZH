@@ -1,8 +1,8 @@
 package convert
 
 import (
-	"github.com/guangyu7/TextRankZH/parse"
-	"github.com/guangyu7/TextRankZH/rank"
+	"github.com/axiaoxin/TextRankZH/parse"
+	"github.com/axiaoxin/TextRankZH/rank"
 )
 
 // TextToRank function converts a ParsedSentence object to Rank object, it is
