@@ -32,7 +32,7 @@ func NewLanguage() *LanguageDefault {
 
 	lang.SetWords("en", words)
 
-	lang.SetWords("zh", getDefaultChines())
+	lang.SetWords("zh", getDefaultChinese())
 
 	return lang
 }
