@@ -3,6 +3,7 @@ package parse
 import (
 	"os"
 	"strings"
+
 	"github.com/huichen/sego"
 )
 
@@ -24,6 +25,10 @@ func SegmenterInit() *segmenter {
 	return instance
 }
 
+func SegmenterDestroy() {
+	instance = nil
+}
+
 /**
  * 分词
  */
@@ -31,11 +36,10 @@ func (s *segmenter) Cut(content string) (words []string) {
 	r := strings.NewReplacer("\t", "", "\n", "", " ", "")
 	content = r.Replace(content)
 	segments := s.handler.Segment([]byte(content))
-  
+
 	// 处理分词结果
 	// 支持普通模式和搜索模式两种分词，见代码中SegmentsToString函数的注释。
 	str := sego.SegmentsToString(segments, false)
-
 
 	// 过滤词性列表
 	for _, word := range strings.Split(str, " ") {
@@ -43,7 +47,7 @@ func (s *segmenter) Cut(content string) (words []string) {
 		if len(token) < 2 {
 			continue
 		}
-		if(s.isSpeech(token[1])) {
+		if s.isSpeech(token[1]) {
 			words = append(words, token[0])
 		}
 	}
